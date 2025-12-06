@@ -1,18 +1,21 @@
-## Getting Started
+# project-java-herencia
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Descripcion de la Jerarquia de Clases
 
-## Folder Structure
+Este proyecto implementa los conceptos de herencia y polimorfismo en Java mediante la creacion de una jerarquia de clases para componentes vehiculares.
 
-The workspace contains two folders by default, where:
+**Clase Base:**
+* `ComponenteVehicular`: Define atributos comunes (`codigo`, `fabricante`) y el metodo `mostrarInformacion()` que es sobrescrito por las subclases.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+**Clases Derivadas (Subclases):**
+* `Motor`: Hereda de `ComponenteVehicular` y añade `cilindros` y `potencia`, ademas del metodo particular `encenderMotor()`.
+* `Transmision`: Hereda y añade `tipo` y `marchas`, con el metodo particular `cambiarMarcha(int)`.
+* `Neumatico`: Hereda y añade `tamaño` y `presion`, con el metodo particular `verificarPresion()`.
+* `Chasis`: Hereda y añade `tipo` y `peso`, con el metodo particular `calcularCargaMaxima()`.
+* `SistemaFrenos`: Hereda y añade `tieneABS` y `tipoDiscos`, con el metodo particular `verificarABS()`.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
 
-## Dependency Management
+## Captura de Ejecucion
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+![Salida por consola del Main](images/captura_ejecucion.png)
